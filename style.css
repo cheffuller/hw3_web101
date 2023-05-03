@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    max-width: 1000px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#header,
+#resumeGrid {
+    margin: 30px;
+}
+
+#header {
+    display: flex;
+    width: 100%;
+}
+
+#headshot {
+    border-radius: 50%;
+    width: 120px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    padding-bottom: 10px;
+}
+
+h2,
+h3,
+h4, 
+{
+    padding: 5px 0px;
+}
+
+#resumeGrid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+section {
+    line-height: 1.75em;;
+}
+
+ul {
+    padding: 0px 20px;
+}
+
+#experience {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
