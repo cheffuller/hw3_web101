@@ -10,11 +10,6 @@ html {
     font-family: 'Rajdhani', sans-serif;
 }
 
-#header,
-#resumeGrid {
-    margin-top: 30px;
-}
-
 #header::before {
     content: "";
     position: absolute;
@@ -30,6 +25,7 @@ html {
 #header {
     width: 100%;
     position: relative;
+    margin-top: 30px;
 }
 
 #headarticle {
@@ -49,13 +45,13 @@ h1 {
     font-size: 42px;
     font-weight: 400;
     letter-spacing: 15px;
-    padding: 20px 0px 0px 30px;
+    padding: 20px 0px 0px 40px;
 }
 
 h3 {
     font-weight: 600;
     letter-spacing: 10px;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 h2 {
@@ -66,7 +62,6 @@ h2 {
 
 section {
     line-height: 1.75em;
-    padding: 30px 0px;
 }
 
 i {
@@ -74,14 +69,14 @@ i {
 }
 
 span {
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     background-color: white;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid grey;
     position: absolute;
-    margin-top: 210px;
-    margin-left: 272px;
+    bottom: -6px;
+    right: -6px;
     z-index: 1;
 }
 
@@ -90,33 +85,66 @@ ul {
 }
 
 #resumeGrid {
-    width: 93%;
+    width: 90%;
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr 2fr 2fr;
-    padding: 30px;
-    margin-top: 60px;
+    grid-template-rows: 1fr 2fr 1fr;
+    margin: 60px 40px 20px 40px;
 }
 
 #contact {
-    padding-top: 0px;
+    position: relative;
 }
 
 #profile {
-    border-left: 1px solid black;
-    padding-top: 0px;
+    border-left: 1px solid grey;
     padding-left: 30px;
 }
 
 #skills {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding-top: 30px;
+    position: relative;
 }
 
 #experience {
-    grid-column: 2/3;
-    grid-row: 2/4;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    padding-top: 30px;
     padding-left: 30px;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
+}
+
+#education {
+    border-right: 1px solid grey;
+    padding-top: 30px;
+}
+
+@media (max-width: 576px) {
+
+    span {
+        display: none;
+    }
+
+    #resumeGrid {
+        /* width: 80%; */
+   
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #contact,
+    #profile,
+    #skills,
+    #experience,
+    #education
+     {  text-align: center;
+        border: none;
+        padding: 20px 0px;
+    }
+
+    ul {
+        display: table;
+        margin: 0 auto;
+    }
 }
