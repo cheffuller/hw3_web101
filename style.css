@@ -126,7 +126,9 @@ ul {
         position: static;
         display: block;
         margin: 50px auto 0px auto;
+    }
 }
+
 /* Changes to a single column grid for responsiveness */
 @media (max-width: 576px) {
 
