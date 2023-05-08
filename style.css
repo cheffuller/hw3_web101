@@ -10,6 +10,7 @@ html {
     font-family: 'Rajdhani', sans-serif;
 }
 
+/* Places a grey background for the header banner */
 #header::before {
     content: "";
     position: absolute;
@@ -32,6 +33,7 @@ html {
     width: 100%;
 }
 
+/* Positions and shapes the headshot image */
 #headshot {
     border-radius: 50%;
     width: 150px;
@@ -64,10 +66,12 @@ section {
     line-height: 1.75em;
 }
 
+/* icons in the contact section */
 i {
     margin-right: 10px;
 }
 
+/* circles at grid border intersections */
 span {
     height: 10px;
     width: 10px;
@@ -84,48 +88,46 @@ ul {
     padding: 0px 20px;
 }
 
+/* Establishes the grid for the resume sections */
 #resumeGrid {
     width: 90%;
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 33.3% 33.3% 33.4%;
     margin: 60px 40px 20px 40px;
 }
 
-#contact {
-    position: relative;
-}
-
-#profile {
-    border-left: 1px solid grey;
-    padding-left: 30px;
-}
-
+#contact,
 #skills {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    padding-top: 30px;
     position: relative;
 }
 
+#profile,
 #experience {
     border-left: 1px solid grey;
+    padding-left: 30px;
+}
+
+#skills,
+#experience,
+#education {
     border-top: 1px solid grey;
     padding-top: 30px;
-    padding-left: 30px;
 }
 
 #education {
     border-right: 1px solid grey;
-    padding-top: 30px;
 }
+
+/* Repositions the headshot image for responsiveness */
 @media (max-width: 725px) {
+
     #headshot {
         position: static;
         display: block;
-        margin: 30px auto 0px auto;
+        margin: 50px auto 0px auto;
 }
-
+/* Changes to a single column grid for responsiveness */
 @media (max-width: 576px) {
 
     span {
@@ -135,7 +137,7 @@ ul {
     #resumeGrid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        margin: 60px 20px 20px 20px;
+        margin: 20px;
     }
 
     #contact,
@@ -151,5 +153,12 @@ ul {
     ul {
         display: table;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 547px) {
+
+    #header::before {
+        height: 175px;
     }
 }
